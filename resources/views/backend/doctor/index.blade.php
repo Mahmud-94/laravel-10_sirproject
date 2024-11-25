@@ -27,8 +27,8 @@
         <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
             <ol class="breadcrumb">
                 <li><a href="index.html">Dashboard</a></li>
-                <li><a href="#"><span>table</span></a></li>
-                <li class="active"><span>Export</span></li>
+                <li><a href="#"><span>Doctor</span></a></li>
+                <li class="active"><span>Doctor List</span></li>
             </ol>
         </div>
         <!-- /Breadcrumb -->
@@ -46,7 +46,7 @@
                         <div class="alert alert-success">{{session('msg')}}</div>                       
                         @endif
 
-                        <h6 class="panel-title txt-dark">Specialist</h6>
+                        <h6 class="panel-title txt-dark">Doctors</h6>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -58,16 +58,16 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Specialist Name</th>
-                                            <th>Detail</th>
+                                            <th>Doctor Name</th>
+                                            <th>Specialist</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Specialist Name</th>
-                                            <th>Detail</th>
+                                            <th>Doctor Name</th>
+                                            <th>Specialist</th>
                                             <th style="width: 25%">Action</th>
 
                                     </tfoot>
@@ -77,7 +77,7 @@
                                         <tr>
                                             <td>{{$loop->iteration}}</td>
                                             <td>{{$item->name}}</td>
-                                            <td>{{$item->details}}</td>
+                                            <td>{{$item->specialist->name}}</td>
                                             <td>
 
 
