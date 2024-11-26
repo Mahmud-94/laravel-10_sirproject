@@ -10,7 +10,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Frontend.home');
+});
+
+Route::get('/', function () {
+    return view('Frontend.about');
 });
 
 // Route::get('/admin/dashboard', function () {

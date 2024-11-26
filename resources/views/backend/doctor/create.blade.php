@@ -60,9 +60,13 @@
 											<div class="col-sm-9">
 												<div class="input-group">
 													<input type="text" class="form-control" name="name" value="{{old('name')}}" id="exampleInputuname_4" placeholder="Username">
+
+
 													@error('name')
-													<div class="alert alert-danger">{{$massage}}</div>
+													<div class="alert alert-danger">{{$message}}</div>
 													@enderror 
+
+
 
 													<div class="input-group-addon"><i class="icon-user"></i></div>
 												</div>
@@ -83,6 +87,11 @@
 														@endforeach
 													</select>
 
+													
+													@error('specialist')
+													<div class="alert alert-danger">{{$message}}</div>
+													@enderror 
+
 													<div class="input-group-addon"><i class="icon-user"></i></div>
 											
 											</div>
@@ -94,6 +103,11 @@
 												<div class="input-group">
 													<input type="text" class="form-control" name="email" value="{{old('email')}}" id="exampleInputuname_4" placeholder="Email">
 													<div class="input-group-addon"><i class="icon-user"></i></div>
+
+													@error('email')
+													<div class="alert alert-danger">{{$message}}</div>
+													@enderror 
+
 												</div>
 											</div>
 										</div>
@@ -103,7 +117,11 @@
 											<div class="col-sm-9">
 												<div class="input-group">
 													<input type="text" class="form-control" name="password" id="exampleInputuname_4" placeholder="password">
-													<div class="input-group-addon"><i class="icon-user"></i></div>
+
+													@error('password')
+													<div class="alert alert-danger">{{$message}}</div>
+													@enderror 
+
 												</div>
 											</div>
 										</div>
@@ -113,8 +131,10 @@
 											<div class="col-sm-9">
 												<div class="input-group">
 													<input type="text" class="form-control" name="password_confirmation" id="exampleInputuname_4" placeholder="Confirm password">
-													<div class="input-group-addon"><i class="icon-user"></i></div>
+
+													
 												</div>
+
 											</div>
 										</div>
 
@@ -147,6 +167,11 @@
 														<label for="radio2">
 															Inactive
 														</label>
+
+														@error('email')
+													<div class="alert alert-danger">{{$message}}</div>
+													@enderror 
+
 													</div>
 														
 												</div>
