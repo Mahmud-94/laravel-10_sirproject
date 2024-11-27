@@ -3,19 +3,29 @@
 use App\Http\Controllers\Auth\Admin\LoginController;
 use App\Http\Controllers\backend\DoctrController;
 use App\Http\Controllers\backend\SpecialistController;
+use App\Http\Controllers\frontend\AppointmentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
-
-
+// Frontend
 Route::get('/', function () {
-    return view('Frontend.home');
+    return view('frontend.home');
 });
 
-Route::get('/', function () {
-    return view('Frontend.about');
+Route::get('/about', function () {
+    return view('frontend.about');
 });
+
+
+
+Route::get('/appointment', [AppointmentController::class, 'formview'])->name('appointment.create');
+Route::post('/appointment', [AppointmentController::class, 'store'])->name('appointment.store');
+
+
+
+
+
 
 // Route::get('/admin/dashboard', function () {
 //     return view('backend.admin_dashboard');

@@ -1,7 +1,7 @@
-@extends('Frontend.layouts.app')
+@extends('frontend.layouts.app')
 
 @section('slider')
 
-@include('Frontend.layouts.slider')
+@include('frontend.layouts.slider')
 
 @endsectioni
