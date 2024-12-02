@@ -43,5 +43,31 @@
 			</ul>
 		</li>
 
+		<li>
+			<a href="javascript:void(0);" data-toggle="collapse" data-target="#aplist"><i class="icon-basket-loaded mr-10"></i>appointments<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+			<ul id="aplist" class="collapse collapse-level-1">
+				<li>
+					<a href="{{route('appointment.index')}}">All appointments</a>
+				</li>
+				<li>
+					<a href="{{route('appointment.create')}}">New appointments</a>
+				</li>
+
+			</ul>
+		</li>
+
+		<li>
+			<a href="javascript:void(0);" data-toggle="collapse" data-target="#dptlist"><i class="icon-basket-loaded mr-10"></i>Department<span class="pull-right"><i class="fa fa-fw fa-angle-down"></i></span></a>
+			<ul id="dptlist" class="collapse collapse-level-1">
+				<li>
+					<a href="{{route('department.index')}}">All Department</a>
+				</li>
+				<li>
+					<a href="{{route('department.create')}}">New Department</a>
+				</li>
+
+			</ul>
+		</li>
+
 	</ul>
 </div>

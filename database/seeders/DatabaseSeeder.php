@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        \App\Models\Specialist::factory(50)->create();
+        \App\Models\Specialist::factory(10)->create();
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -28,15 +28,18 @@ class DatabaseSeeder extends Seeder
         \App\Models\Admin::create([
             'name' => 'hasan',
             'email' => 'hassan@gmail.com',
-           'password' => Hash::make('hasaan123'),
+           'password' => Hash::make('hasasn123'),
         ]);
 
 
         \App\Models\Doctor::create([
             'name' => 'hasan',
-            'email' => 'hasan@example.com',
-           'password' => Hash::make('hasan123'),
+            'email' => 'hassan@example.com',
+           'password' => Hash::make('hassan123'),
            'specialist_id' => '1',
+           'photo' => 'images/nophoto.jpg',
+           'status' => 'active',
+
         ]);
     }
 }

@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\frontend;
+namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Appointment;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
+
+
 
 class AppointmentController extends Controller
 {
@@ -14,7 +16,8 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        //
+        $items=Appointment::all();
+        return view('backend.appointment.index', compact('items'));
     }
 
     /**
@@ -23,13 +26,13 @@ class AppointmentController extends Controller
     public function create()
     {
         $doctors = Doctor::all();
-        return view('frontend.appointment', compact('doctors'));
+        return view('backend.appointment.create', compact('doctors'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request  )
+    public function store(Request $request)
     {
         $request->validate([
             'name' => 'required',
@@ -39,6 +42,7 @@ class AppointmentController extends Controller
             'date' => 'required',
             
             'remarks' => 'max:255 | min:10',
+            'status' => 'required',
            
         ]);
         $app = new Appointment();
@@ -49,6 +53,7 @@ class AppointmentController extends Controller
        $app->date = $request->date;
      
        $app->remarks = $request->remarks;
+       $app->status = $request->status;
        $app->save();
 
        return redirect()->back()->with('msg', "Successfully Appointment Done");
@@ -84,5 +89,13 @@ class AppointmentController extends Controller
     public function destroy(Appointment $appointment)
     {
         //
+    }
+
+    public function changeStatus($id)
+    {
+       $record = Appointment::find($id);
+       $record->status =='pending' ? $record->status ='confirmed':$record->status ='pending';
+       $record->update();
+       return redirect()->back();
     }
 }
