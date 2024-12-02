@@ -64,7 +64,7 @@
 
 													@error('name')
 													<div class="alert alert-danger">{{$message}}</div>
-													@enderror 
+													@enderror
 
 
 
@@ -76,7 +76,7 @@
 										<div class="form-group">
 											<label for="exampleInputuname_4" class="col-sm-3 control-label">Specialist</label>
 											<div class="col-sm-9">
-												
+
 													<select name="specialist" id="" class="form-control">
 
 														<option value="">Select one</option>
@@ -87,13 +87,13 @@
 														@endforeach
 													</select>
 
-													
+
 													@error('specialist')
 													<div class="alert alert-danger">{{$message}}</div>
-													@enderror 
+													@enderror
 
 													<div class="input-group-addon"><i class="icon-user"></i></div>
-											
+
 											</div>
 										</div>
 
@@ -106,7 +106,7 @@
 
 													@error('email')
 													<div class="alert alert-danger">{{$message}}</div>
-													@enderror 
+													@enderror
 
 												</div>
 											</div>
@@ -120,7 +120,7 @@
 
 													@error('password')
 													<div class="alert alert-danger">{{$message}}</div>
-													@enderror 
+													@enderror
 
 												</div>
 											</div>
@@ -132,7 +132,7 @@
 												<div class="input-group">
 													<input type="text" class="form-control" name="password_confirmation" id="exampleInputuname_4" placeholder="Confirm password">
 
-													
+
 												</div>
 
 											</div>
@@ -154,15 +154,15 @@
 													<label class="control-label col-sm-3">Checkbox</label>
 													<div class="form-control">
 														<input id="radio1" name="status" value="active" @if (old('status')=='active') checked
-														
+
 														@endif type="checkbox">
 														<label for="radio1">
 															Active
 														</label>
-													
-													
+
+
 														<input id="radio2" name="status" value="inactive" @if (old('status')=='inactive') checked
-														
+
 														@endif type="checkbox">
 														<label for="radio2">
 															Inactive
@@ -170,10 +170,10 @@
 
 														@error('email')
 													<div class="alert alert-danger">{{$message}}</div>
-													@enderror 
+													@enderror
 
 													</div>
-														
+
 												</div>
 
 										<div class="form-group mb-0">
