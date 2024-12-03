@@ -36,7 +36,7 @@ class DoctrController extends Controller
     {
         $request->validate(
             ['name'=>'required | max:100',
-            'specialist'=>'required | email',
+            'specialist'=>'required',
             'email'=>'required | max:50',
           
             'photo'=>'image|mimes:jpeg,png,webp,jpg,gif,svg|max:2048',

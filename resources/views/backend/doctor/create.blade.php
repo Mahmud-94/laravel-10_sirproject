@@ -168,7 +168,7 @@
 															Inactive
 														</label>
 
-														@error('email')
+														@error('status')
 													<div class="alert alert-danger">{{$message}}</div>
 													@enderror
 
